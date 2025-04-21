@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 import {HashRouter, Routes, Route, NavLink} from 'react-router-dom'
 
@@ -19,8 +20,7 @@ function About() {
         </div>
     );
 }
-
-function App() {
+const App = () => {
     return (
         <div className="App">
             <header className="App-header">
