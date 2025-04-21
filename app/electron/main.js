@@ -15,9 +15,7 @@ function createWindow() {
         },
 
     })
-
-    // и загрузить index.html приложения.
-    //mainWindow.loadFile('index.html')
+    mainWindow.setMenuBarVisibility(false);
 
     const startUrl = process.env.ELECTRON_START_URL || url.format({
         pathname: path.join(__dirname, '../index.html'),
@@ -27,8 +25,7 @@ function createWindow() {
 
     mainWindow.loadURL(startUrl);
 
-    // Отображаем средства разработчика.
-    mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {
