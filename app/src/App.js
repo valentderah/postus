@@ -1,36 +1,25 @@
-import logo from './logo.svg';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import {HashRouter, Routes, Route, NavLink} from 'react-router-dom'
+import {Content} from "./components/layout/Content";
+import {HashRouter, Route, Routes} from "react-router-dom";
+import {NewPost} from "./routes/new-post";
+import {LinkSocial} from "./routes/link-social";
 
-function Home() {
-    return (
-        <div>
-            <h1>Home</h1>
-            <NavLink to='/about'>About</NavLink>
-        </div>
-    );
-}
 
-function About() {
-    return (
-        <div>
-            <h1>About</h1>
-            <NavLink to='/'>Home</NavLink>
-        </div>
-    );
-}
 const App = () => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <HashRouter>
-                    <Routes>
-                        <Route path="/" element={<Home/>}/>
-                        <Route path="/about" element={<About/>}/>
-                    </Routes>
-                </HashRouter>
+        <div className="app">
+            <header className="app-header">
+                <title>Постус</title>
             </header>
+            <HashRouter>
+                <Content>
+                    <Routes>
+                        <Route path="/" element={<NewPost/>}/>
+                        <Route path="/link-social" element={<LinkSocial/>}/>
+                    </Routes>
+                </Content>
+            </HashRouter>
         </div>
     );
 }

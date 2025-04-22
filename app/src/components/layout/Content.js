@@ -1,10 +1,9 @@
 import React from 'react';
-import { Sidebar } from './Sidebar';
-import { Tasks } from '../Tasks';
+import {Sidebar} from "./Sidebar";
 
-export const Content = () => (
-  <section className="content">
-    <LeftBar />
-    <Tasks />
-  </section>
+export const Content = ({children}) => (
+    <section className="content">
+        <Sidebar/>
+        <main className="main">{children}</main>
+    </section>
 );

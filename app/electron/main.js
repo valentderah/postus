@@ -2,8 +2,6 @@ const {app, BrowserWindow} = require('electron/main')
 const path = require('node:path')
 const url = require('url');
 
-// require('./ipcmain');
-
 function createWindow() {
     // Создаем окно браузера.
     const mainWindow = new BrowserWindow({
@@ -25,7 +23,7 @@ function createWindow() {
 
     mainWindow.loadURL(startUrl);
 
-    // mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {
