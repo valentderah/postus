@@ -1,7 +1,7 @@
 export const LinkSocial = () => {
     return (
         <div>
-            Привязка к соц. сетям
+            <h1>Link Social Media</h1>
         </div>
     );
 }

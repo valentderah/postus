@@ -8,7 +8,7 @@ import {LinkSocial} from "./routes/link-social";
 
 const App = () => {
     return (
-        <div className="app">
+        <div>
             <header className="app-header">
                 <title>Постус</title>
             </header>

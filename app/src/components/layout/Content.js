@@ -1,9 +1,13 @@
 import React from 'react';
 import {Sidebar} from "./Sidebar";
+import {Header} from "./Header";
 
 export const Content = ({children}) => (
-    <section className="content">
+    <div className="container">
         <Sidebar/>
-        <main className="main">{children}</main>
-    </section>
+        <div className="main-container">
+            <Header/>
+            {children}
+        </div>
+    </div>
 );
